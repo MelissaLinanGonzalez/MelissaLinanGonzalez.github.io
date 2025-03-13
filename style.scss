@@ -13,9 +13,16 @@ body{
     margin: 0 auto;
     padding: 0;
     display: grid;
-    grid-template-columns: 25% 75%;
-    grid-template-areas: "stickyMenu contenido";
+    grid-template-rows: auto;
+    grid-template-areas: "stickyMenu"
+                         "contenido";
 }
 
+@media (min-width: 1000px) {
+    #wrapper {
+        grid-template-columns: 25% 75%;
+        grid-template-areas: "stickyMenu contenido";
+    }
+}
 
 
