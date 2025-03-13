@@ -1,3 +1,6 @@
+/// Estilos del menú sticky.
+/// El menú se posiciona de forma fija en la pantalla y siempre está visible.
+
 #stickyMenu {
     position: sticky;
     top: 0;
@@ -11,12 +14,19 @@
     background-color: #A7C7E7;
     color: black;
 
+    /// Estilos del contenedor de la información del perfil.
+    /// Alinea el contenido y ajusta el tamaño del texto.
+
     #infoPerfil{
         align-items: center;
         box-sizing: border-box;
         margin: 2vw;
         word-wrap: break-word;
     }
+
+    /// Estilos para la lista dentro del menú.
+    /// Aplica un diseño en fila con separación entre los elementos.
+    
 
     ul{
         list-style: none;
@@ -29,9 +39,18 @@
         
     }
 
+    /// Estilo para cada elemento de la lista.
+    /// Se elimina el padding superior.
+     */
+
     ul> li{
         padding-top: 0;
     }
+
+    /// Estilos para los enlaces dentro de la lista.
+    /// Cambia el color y elimina el subrayado de los enlaces.
+    
+
     a {
         color: #1E3A5F;
         text-decoration: none;
@@ -39,12 +58,19 @@
         display: inline-block;
     }
 
+    /// Estilo para las imágenes dentro del menú.
+    /// Redondea las imágenes y establece el tamaño de las mismas.
+    
+
     img{
         width: 15vw;
         border-radius: 40px;
 
     }
 }
+
+/// Diseño para pantallas grandes (mayores a 1000px).
+/// Establece un diseño en columna para el menú sticky.
 
 
 @media (min-width: 1000px) {   
@@ -59,6 +85,11 @@
         flex-direction: column;
         z-index: 1000;
         text-align: center;
+
+        /// Estilos para la lista en el menú cuando es en pantalla grande.
+        /// Disposición en columna y sin márgenes a la derecha.
+        
+
         ul{
             list-style: none;
             padding: 0;
@@ -68,14 +99,25 @@
             color: black;
         }
 
+        /// Estilo para los elementos de la lista en pantallas grandes.
+        
+
         ul> li{
             padding-top: 0;
             margin: 0;
         }
+
+        /// Estilo para los enlaces en pantallas grandes.
+        /// Se eliminan los padding y el subrayado.
+
         a {
             text-decoration: none;
             padding: 0%;
         }
+
+        /// Estilo para las imágenes dentro del menú en pantallas grandes.
+        /// Se aumenta el tamaño de la imagen.
+        
 
         img{
             width: 30%;
