@@ -3,7 +3,7 @@
     margin: 3%;
     margin-bottom: 3%;
     h2{
-        color: #6400c2;
+        color: #2E8B57;
         text-align: center;
     }
 
@@ -13,11 +13,35 @@
         margin-right: 2%;
         padding-left: 2%;
         padding-right: 2%;
-        background-color: #00c298;
+        background-color:#E0FFD1;
         width: 100%;
         padding-top: 2%;
         padding-bottom: 2%;
         border-radius: 20px;
         box-sizing: border-box;
     }
+
+    ul>li{
+        padding-top: 1%;
+    }
+
+    ul>li>a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .email > img{
+        width: 5%;
+        margin-left: 2%;
+        
+    }
+    .github > img{
+        width: 5%;
+        margin-left: 2%;
+    }
+
+    #contacto > ul > li{
+        list-style: none;
+    }
+
 }

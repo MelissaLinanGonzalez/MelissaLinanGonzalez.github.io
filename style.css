@@ -8,8 +8,8 @@
   justify-content: flex-start;
   height: auto;
   padding: 2%;
-  background-color: #6400c2;
-  color: white;
+  background-color: #A7C7E7;
+  color: black;
 }
 #stickyMenu #infoPerfil {
   align-items: center;
@@ -30,7 +30,7 @@
   padding-top: 0;
 }
 #stickyMenu a {
-  color: white;
+  color: #1E3A5F;
   text-decoration: none;
   padding: 0;
   display: inline-block;
@@ -56,20 +56,21 @@
   #stickyMenu ul {
     list-style: none;
     padding: 0;
-    padding-top: 2%;
     display: flex;
     flex-direction: column;
     margin-right: 0;
+    color: black;
   }
   #stickyMenu ul > li {
-    padding-top: 5%;
+    padding-top: 0;
+    margin: 0;
   }
   #stickyMenu a {
     text-decoration: none;
     padding: 0%;
   }
   #stickyMenu img {
-    width: 40%;
+    width: 30%;
     border-radius: 40%;
   }
 }
@@ -79,7 +80,7 @@
   margin-bottom: 3%;
 }
 #contenido h2 {
-  color: #6400c2;
+  color: #2E8B57;
   text-align: center;
 }
 #contenido div {
@@ -88,16 +89,34 @@
   margin-right: 2%;
   padding-left: 2%;
   padding-right: 2%;
-  background-color: #00c298;
+  background-color: #E0FFD1;
   width: 100%;
   padding-top: 2%;
   padding-bottom: 2%;
   border-radius: 20px;
   box-sizing: border-box;
 }
+#contenido ul > li {
+  padding-top: 1%;
+}
+#contenido ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+#contenido .email > img {
+  width: 5%;
+  margin-left: 2%;
+}
+#contenido .github > img {
+  width: 5%;
+  margin-left: 2%;
+}
+#contenido #contacto > ul > li {
+  list-style: none;
+}
 
 body {
-  background-color: rgb(179, 240, 248);
+  background-color: #A8DCA8;
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
