@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/ico" href="sources/favicon.ico">
+    <title>Contacto</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Melissa Liñán<img src="sources/favico.png" alt="icon" class="navbar-icon"> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="experiencia.html">Experiencia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="estudios.html">Estudios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobremi.html">Sobre mí</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+      <h2 class="mb-4">Contáctame</h2>
+      <div class="row justify-content-between">
+        
+        <div class="col-md-6">
+          <div class="contact-form mb-5">
+            <form action="enviar_mensaje.php" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label">Tu Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="email" class="form-label">Tu Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="subject" class="form-label">Asunto</label>
+                <input type="text" class="form-control" id="subject" name="subject" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="message" class="form-label">Tu Mensaje</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+              </div>
+  
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+              </div>
+            </form>
+          </div>
+        </div>
+  
+        <div class="col-md-5">
+          <div class="info-column">
+            <h4>Mi Información de Contacto</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://github.com/MelissaLinanGonzalez" target="_blank">
+                  <img src="sources/icons8-github-48.png" alt="GitHub" class="me-2">
+                </a>
+                <a href="https://github.com/MelissaLinanGonzalez" target="_blank">MelissaLinanGonzalez</a>
+              </li>
+              <li><img src="sources/icons8-gmail-48.png" alt="Correo Electrónico" class="me-2">melissalinangonzalez@gmail.com</li>
+              <li><img src="sources/icons8-phone-48.png" alt="Teléfono" class="me-2"> +34 656 230 115</li>
+            </ul>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    <script src=js_dist/bootstrap.bundle.min.js></script>
+</body>
