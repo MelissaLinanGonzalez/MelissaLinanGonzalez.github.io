@@ -9,4 +9,4 @@ async function cargarHtml(pagina){
     }
 }
 
-window.onload = cargarHtml("index.html");
+window.onload = cargarHtml("principal.html");
