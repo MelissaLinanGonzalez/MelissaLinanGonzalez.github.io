@@ -1,40 +1,808 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/ico" href="sources/favicon.ico">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <title>Melissa Liñán</title>
-    </head>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de Melissa Liñán - Desarrolladora de Software especializada en Java, desarrollo web y bases de datos.">
+    <meta name="author" content="Melissa Liñán">
+    <title>Melissa Liñán | Desarrolladora de Software</title>
+
+    <!-- ==================== FAVICON ==================== -->
+    <link rel="icon" type="image/ico" href="sources/favicon.ico">
+
+    <!-- ==================== GOOGLE FONTS - POPPINS ==================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ==================== BOOTSTRAP 5 CSS ==================== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ==================== FONT AWESOME ICONS ==================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- ==================== AOS - ANIMATE ON SCROLL ==================== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- ==================== CUSTOM STYLES ==================== -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" onclick="cargarHtml('principal.html')">Melissa Liñán <img src="sources/favico.png" alt="icon" class="navbar-icon"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+    <!-- ============================================================
+         NAVBAR - Navegación fija con efecto al hacer scroll
+    ============================================================ -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <!-- Logo / Nombre -->
+            <a class="navbar-brand fw-bold" href="#hero">
+                <span class="brand-gradient">ML</span>
+                <span class="brand-text">Melissa Liñán</span>
+            </a>
+
+            <!-- Botón hamburguesa para móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Enlaces de navegación -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="cargarHtml('experiencia.html')">Experiencia</a>
+                        <a class="nav-link" href="#hero">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="cargarHtml('estudios.html')">Estudios</a>
+                        <a class="nav-link" href="#about">Sobre Mí</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="cargarHtml('sobremi.html')">Sobre mí</a>
+                        <a class="nav-link" href="#skills">Habilidades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="cargarHtml('contacto.html')">Contacto</a>
+                        <a class="nav-link" href="#projects">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div id="contenido-html" class="container-fluid mt-5 px-5"></div>
-    <script src=js_dist/bootstrap.bundle.min.js></script>
-    <script src=script.js></script>
+
+    <!-- ============================================================
+         HERO SECTION - Sección principal con degradado y patrón
+         Fondo: Degradado suave azul con patrón geométrico
+    ============================================================ -->
+    <section id="hero" class="hero-section">
+        <!-- Patrón de fondo decorativo -->
+        <div class="hero-pattern"></div>
+        <!-- Formas decorativas flotantes -->
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+
+        <div class="container position-relative">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-lg-7" data-aos="fade-up" data-aos-duration="1000">
+                    <!-- Saludo -->
+                    <p class="hero-greeting">
+                        <span class="wave">👋</span> ¡Hola! Soy
+                    </p>
+
+                    <!-- Nombre con degradado -->
+                    <h1 class="hero-title">
+                        Melissa <span class="text-gradient">Liñán</span>
+                    </h1>
+
+                    <!-- Subtítulo / Rol -->
+                    <h2 class="hero-subtitle">
+                        <i class="fas fa-code me-2"></i>Desarrolladora de Software
+                    </h2>
+
+                    <!-- Descripción breve -->
+                    <p class="hero-description">
+                        Apasionada por crear experiencias digitales funcionales y atractivas.
+                        Especializada en <strong>desarrollo web</strong>, <strong>Java</strong> y
+                        <strong>gestión de bases de datos</strong>.
+                    </p>
+
+                    <!-- Botones de acción -->
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-gradient btn-lg">
+                            <i class="fas fa-rocket me-2"></i>Ver Proyectos
+                        </a>
+                        <a href="#contact" class="btn btn-outline-custom btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Contactar
+                        </a>
+                    </div>
+
+                    <!-- Redes sociales rápidas -->
+                    <div class="hero-social">
+                        <a href="https://github.com/MelissaLinanGonzalez" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/melissalinangonzalez/" target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:dev.melissalinan@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicador de scroll -->
+        <div class="scroll-indicator">
+            <a href="#about">
+                <span class="mouse"></span>
+                <span class="scroll-text">Scroll</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SOBRE MÍ - Sección con fondo BLANCO (par)
+    ============================================================ -->
+    <section id="about" class="section-padding bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Foto -->
+                <div class="col-lg-5 text-center" data-aos="fade-right" data-aos-duration="800">
+                    <div class="about-image-container">
+                        <div class="about-image-bg"></div>
+                        <img src="sources/fotomia.jpg" alt="Melissa Liñán - Desarrolladora de Software"
+                            class="about-image">
+                        <div class="about-image-dots"></div>
+                    </div>
+                </div>
+
+                <!-- Texto -->
+                <div class="col-lg-7" data-aos="fade-left" data-aos-duration="800">
+                    <span class="section-badge">Conóceme</span>
+                    <h2 class="section-title">Sobre Mí</h2>
+
+                    <p class="lead mb-4">
+                        ¡Hola! Soy <strong>Melissa</strong>, una persona curiosa, resolutiva y con
+                        muchas ganas de aprender constantemente.
+                    </p>
+
+                    <p class="text-muted mb-4">
+                        Me apasiona el mundo del desarrollo de interfaces, el diseño limpio y funcional,
+                        y crear experiencias digitales que realmente conecten con las personas. Mi formación
+                        en <strong>Automatización y Robótica Industrial</strong> me dio una base sólida técnica,
+                        pero fue el <strong>desarrollo web</strong> lo que realmente despertó mi vocación.
+                    </p>
+
+                    <p class="text-muted mb-4">
+                        Actualmente, estoy muy interesada en profundizar en áreas como el desarrollo
+                        <strong>Front-End</strong>, <strong>Spring Boot</strong> y seguir mejorando
+                        mis habilidades en programación y diseño.
+                    </p>
+
+                    <!-- Datos destacados -->
+                    <div class="about-info-grid">
+                        <div class="about-info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <span class="info-label">Formación</span>
+                                <span class="info-value">DAM & Robótica Industrial</span>
+                            </div>
+                        </div>
+                        <div class="about-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="info-label">Ubicación</span>
+                                <span class="info-value">Córdoba, España</span>
+                            </div>
+                        </div>
+                        <div class="about-info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <span class="info-label">Estado</span>
+                                <span class="info-value">Abierta a oportunidades</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         HABILIDADES - Sección con fondo GRIS AZULADO (impar)
+    ============================================================ -->
+    <section id="skills" class="section-padding bg-soft">
+        <div class="container">
+            <!-- Encabezado de sección -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Stack Técnico</span>
+                <h2 class="section-title">Habilidades</h2>
+                <p class="section-subtitle mx-auto">
+                    Tecnologías y herramientas con las que trabajo para crear soluciones eficientes.
+                </p>
+            </div>
+
+            <!-- Grid de Skills -->
+            <div class="row g-4 justify-content-center">
+                <!-- Java -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <span class="skill-name">Java</span>
+                    </div>
+                </div>
+
+                <!-- Spring Boot -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper spring">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <span class="skill-name">Spring Boot</span>
+                    </div>
+                </div>
+
+                <!-- HTML5 -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper html">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <span class="skill-name">HTML5</span>
+                    </div>
+                </div>
+
+                <!-- CSS3 -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper css">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <span class="skill-name">CSS3</span>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper js">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Bootstrap -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper bootstrap">
+                            <i class="fab fa-bootstrap"></i>
+                        </div>
+                        <span class="skill-name">Bootstrap</span>
+                    </div>
+                </div>
+
+                <!-- SASS -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper sass">
+                            <i class="fab fa-sass"></i>
+                        </div>
+                        <span class="skill-name">SASS</span>
+                    </div>
+                </div>
+
+                <!-- MySQL -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2" data-aos="zoom-in" data-aos-delay="350">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper mysql">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <span class="skill-name">MySQL</span>
+                    </div>
+                </div>
+
+                <!-- Git -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper git">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <span class="skill-name">Git</span>
+                    </div>
+                </div>
+
+                <!-- GitHub -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2" data-aos="zoom-in" data-aos-delay="450">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper github">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <span class="skill-name">GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Linux -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper linux">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <span class="skill-name">Linux</span>
+                    </div>
+                </div>
+
+                <!-- Docker -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2" data-aos="zoom-in" data-aos-delay="550">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper docker">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <span class="skill-name">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PROYECTOS - Sección con fondo BLANCO (par)
+    ============================================================ -->
+    <section id="projects" class="section-padding bg-white">
+        <div class="container">
+            <!-- Encabezado de sección -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Portfolio</span>
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <p class="section-subtitle mx-auto">
+                    Una selección de proyectos que demuestran mis habilidades y pasión por el desarrollo.
+                </p>
+            </div>
+
+            <!-- Grid de Proyectos -->
+            <div class="row g-4">
+                <!-- Proyecto 1: WikiDam -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/MelissaLinanGonzalez/WikiDam" target="_blank"
+                                        class="project-link" title="Ver código">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">WikiDam</h3>
+                            <p class="project-description">
+                                Plataforma wiki colaborativa para compartir recursos y documentación
+                                del ciclo DAM. Sistema de gestión de contenidos con autenticación.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Prisma</span>
+                                <span class="tag">MySQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/MelissaLinanGonzalez/WikiDam" target="_blank"
+                                    class="btn btn-sm btn-gradient">
+                                    <i class="fab fa-github me-2"></i>Ver Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Proyecto 2: Desarrollo de Interfaces -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-image-placeholder interfaces">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/MelissaLinanGonzalez/Desarrollo_Interfaces"
+                                        target="_blank" class="project-link" title="Ver código">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Desarrollo de Interfaces</h3>
+                            <p class="project-description">
+                                Colección de proyectos de UI/UX desarrollados durante el módulo
+                                de Desarrollo de Interfaces. Aplicaciones de escritorio con JavaFX.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">JavaFX</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">FXML</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/MelissaLinanGonzalez/Desarrollo_Interfaces" target="_blank"
+                                    class="btn btn-sm btn-gradient">
+                                    <i class="fab fa-github me-2"></i>Ver Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Proyecto 3: Java Repository -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="sources/java programming.png" alt="Java Repository">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/MelissaLinanGonzalez/Java-Repository" target="_blank"
+                                        class="project-link" title="Ver código">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Java Repository</h3>
+                            <p class="project-description">
+                                Repositorio con ejercicios y proyectos desarrollados en Java.
+                                Incluye POO, estructuras de datos, algoritmos y patrones de diseño.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">POO</span>
+                                <span class="tag">Maven</span>
+                                <span class="tag">JUnit</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/MelissaLinanGonzalez/Java-Repository" target="_blank"
+                                    class="btn btn-sm btn-gradient">
+                                    <i class="fab fa-github me-2"></i>Ver Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Proyecto 4: Acceso a Datos -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="sources/bbdd.png" alt="Acceso a Datos">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/MelissaLinanGonzalez/Acceso_Datos" target="_blank"
+                                        class="project-link" title="Ver código">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Acceso a Datos</h3>
+                            <p class="project-description">
+                                Proyectos del módulo de Acceso a Datos: conexión a BBDD,
+                                JDBC, Hibernate, JPA, manejo de XML/JSON y Spring Data.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">Spring Boot</span>
+                                <span class="tag">JPA</span>
+                                <span class="tag">MySQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/MelissaLinanGonzalez/Acceso_Datos" target="_blank"
+                                    class="btn btn-sm btn-gradient">
+                                    <i class="fab fa-github me-2"></i>Ver Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Proyecto 5: JavaScript Introducción -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-image-placeholder javascript">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/MelissaLinanGonzalez/JavaScript_Introduccion"
+                                        target="_blank" class="project-link" title="Ver código">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">JavaScript Introducción</h3>
+                            <p class="project-description">
+                                Ejercicios y mini-proyectos para aprender JavaScript desde cero.
+                                DOM, eventos, ES6+, funciones, arrays y programación asíncrona.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">ES6+</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/MelissaLinanGonzalez/JavaScript_Introduccion"
+                                    target="_blank" class="btn btn-sm btn-gradient">
+                                    <i class="fab fa-github me-2"></i>Ver Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Botón ver más en GitHub -->
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="https://github.com/MelissaLinanGonzalez" target="_blank" class="btn btn-outline-custom btn-lg">
+                    <i class="fab fa-github me-2"></i>Ver más en GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACTO - Sección con fondo GRIS AZULADO (impar)
+    ============================================================ -->
+    <section id="contact" class="section-padding bg-soft">
+        <div class="container">
+            <!-- Encabezado de sección -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Hablemos</span>
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-subtitle mx-auto">
+                    ¿Tienes un proyecto en mente o simplemente quieres saludar? ¡Me encantaría saber de ti!
+                </p>
+            </div>
+
+            <div class="row g-5">
+                <!-- Formulario de Contacto -->
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="contact-form-card">
+                        <h4 class="contact-form-title">
+                            <i class="fas fa-paper-plane me-2"></i>Envíame un mensaje
+                        </h4>
+
+                        <!-- Formulario con Formspree (sin backend) -->
+                        <form action="https://formspree.io/f/TU_ID_AQUI" method="POST" class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Nombre *</label>
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        placeholder="Tu nombre" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="tu@email.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Asunto</label>
+                                    <input type="text" class="form-control" id="subject" name="subject"
+                                        placeholder="¿Sobre qué quieres hablar?">
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Mensaje *</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5"
+                                        placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-gradient btn-lg w-100">
+                                        <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="contact-info-card">
+                        <h4 class="contact-info-title">
+                            <i class="fas fa-address-book me-2"></i>Mis Datos
+                        </h4>
+                        <p class="text-muted mb-4">
+                            Estoy disponible para proyectos freelance, colaboraciones o
+                            simplemente para una conversación sobre tecnología.
+                        </p>
+
+                        <!-- Lista de contactos -->
+                        <div class="contact-list">
+                            <!-- GitHub -->
+                            <a href="https://github.com/MelissaLinanGonzalez" target="_blank" class="contact-item">
+                                <div class="contact-icon github">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">GitHub</span>
+                                    <span class="contact-value">MelissaLinanGonzalez</span>
+                                </div>
+                                <i class="fas fa-arrow-right contact-arrow"></i>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="#" target="_blank" class="contact-item">
+                                <div class="contact-icon linkedin">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">LinkedIn</span>
+                                    <span class="contact-value">(Añadir URL)</span>
+                                </div>
+                                <i class="fas fa-arrow-right contact-arrow"></i>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:dev.melissalinan@gmail.com" class="contact-item">
+                                <div class="contact-icon email">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">dev.melissalinan@gmail.com</span>
+                                </div>
+                                <i class="fas fa-arrow-right contact-arrow"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER - Pie de página
+    ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">
+                        © 2025 <strong>Melissa Liñán</strong>. Hecho con
+                        <i class="fas fa-heart text-danger"></i> y mucho
+                        <i class="fas fa-coffee"></i>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-social">
+                        <a href="https://github.com/MelissaLinanGonzalez" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/melissalinangonzalez/" target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:dev.melissalinan@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <!-- Bootstrap 5 JS Bundle (incluye Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS - Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // ==================== INICIALIZAR AOS ====================
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+
+        // ==================== NAVBAR SCROLL EFFECT ====================
+        const navbar = document.getElementById('mainNavbar');
+
+        function handleNavbarScroll() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', handleNavbarScroll);
+        handleNavbarScroll(); // Check on load
+
+        // ==================== SMOOTH SCROLL ====================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+
+                if (target) {
+                    const navbarHeight = navbar.offsetHeight;
+                    const targetPosition = target.offsetTop - navbarHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Cerrar menú móvil si está abierto
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                        bsCollapse.hide();
+                    }
+                }
+            });
+        });
+
+        // ==================== ACTIVE NAV LINK ON SCROLL ====================
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+        function updateActiveNavLink() {
+            const scrollPosition = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+        updateActiveNavLink(); // Check on load
+
+        // ==================== WAVE ANIMATION ====================
+        const wave = document.querySelector('.wave');
+        if (wave) {
+            setInterval(() => {
+                wave.style.animation = 'none';
+                setTimeout(() => {
+                    wave.style.animation = 'wave 2.5s ease-in-out infinite';
+                }, 10);
+            }, 3000);
+        }
+    </script>
 </body>
+
 </html>
